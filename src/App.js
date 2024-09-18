@@ -1,19 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Login from './Components/login';
-import Dashboard from './dashboard';
-function App() {
-  return (
-    <div className="App"> 
-      <div className="login">
-        
-          <Login/>
-      </div>
-      <div className='Dashboard'>
-          <Dashboard/>
-          </div>
-    </div>
-  );
-}
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
 
-export default App;
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

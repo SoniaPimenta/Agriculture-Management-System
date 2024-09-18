@@ -1,6 +1,13 @@
-import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Login= ()=> {
+
+    const navigate = useNavigate();
+    
+      const handleLogin = () => {
+        // Perform login logic here
+        navigate('/dashboard');
+      };
 	return(
         // <div class="login-container">
         //      <div class="login-card">
@@ -42,10 +49,11 @@ const Login= ()=> {
             </label>
             <a href="#">Forgot Password</a>
         </div>
-        <button type="submit" className="btn">Login</button>
+        <button onClick={handleLogin} type="submit" className="btn">Login</button>
         <div className="register-link">
             <p>Don't have an account? <a href="#">Register</a></p>
         </div>
+        
     </form>
 </div>
     )
