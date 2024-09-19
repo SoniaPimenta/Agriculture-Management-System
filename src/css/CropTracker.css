@@ -1,0 +1,55 @@
+
+
+.input-card {
+  width: 200%;
+  padding:auto;
+}
+
+.crop-form {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.analytics-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.analytics-card {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.chart-container {
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+}
+
+.analytics-details {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+button {
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
