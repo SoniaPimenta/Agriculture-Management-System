@@ -1,0 +1,285 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* .login{
+  background-image: url("./assets/background-blur.jpg");
+  width: 100%;
+  height: 668px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+
+}
+
+.login-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 700px;
+  height: 450px;
+  
+}
+
+.login-left {
+  background-color: #4CAF50;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 200px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.login-right {
+  padding: 30px;
+  flex: 2;
+}
+
+.text {
+    color:black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.forgot-password a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+} */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./../assets/brownfarm.jpeg') no-repeat; 
+  background-size: cover;
+  background-position: center;
+} */
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: white;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 20px 45px 20px 20px;
+}
+
+h1{
+  color: brown;
+}
+.input-box input::placeholder{
+  color: white;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: black;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: white;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background:white;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+} 
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration:underline;
+}
+
+.login-container, .dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,130 @@
+.dashy{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  background: url('../assets/tracktor.jpeg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+     background-size: cover
+}
+
+.dashy h3{
+  border-radius: 8px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+  border: #333;
+  background-color: #dadee2;
+  border-width: 1px solid #ccc;
+  cursor: pointer;
+}
+.dashy-corners{
+  padding-top: 100px;
+  display: flex;
+  /* align-items: center;
+  text-align: center; */
+  /* background-color: green; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap: 25%;
+}
+.dashy-box{
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  /* background-color: red; */
+  /* align-items: center; */
+}
+.dashy-center{
+  padding: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: red; */
+}
+
+
+
+.dashboard-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+.dashy{
+  background: url('../assets/bg-noblur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .dashy-corners{
+    /* display: flex; */
+    padding-top: 30%;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .dashy-box{
+    gap: 30px;
+    /* display: flex;
+    flex-direction: row; */
+  }
+  .dashy-center{
+    padding: 30px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}

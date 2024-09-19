@@ -1,0 +1,101 @@
+.weather-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .weather-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-display h3 {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .temp {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 10px;
+  }
+  
+  .weather-icon img {
+    width: 100px;
+  }
+  
+  .soil-fertilizer {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .soil-fertilizer h4 {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

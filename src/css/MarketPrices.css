@@ -1,0 +1,71 @@
+/* General container styles */
+.market-prices-container {
+    font-family: 'Roboto', sans-serif;
+        /* background-image: url('your-background-image-path.jpg'); */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styles */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Bar chart container */
+.bar-chart-container {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .market-prices-container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .bar-chart-container {
+        max-width: 100%;
+    }
+}
