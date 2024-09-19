@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Login from './Components/login';
+import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import GovernmentSchemes from './pages/GSchemes';

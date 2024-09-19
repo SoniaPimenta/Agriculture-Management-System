@@ -87,6 +87,8 @@ const schemes = [
 
 const GovernmentSchemes = () => {
   return (
+
+
     <section className='schemes-background'>
     <section className="schemes-container">
       <h1>Government Schemes for Farmers</h1>
@@ -95,9 +97,9 @@ const GovernmentSchemes = () => {
         {schemes.length > 0 ? (
           schemes.map((scheme) => (
             <div
-              key={scheme.id}
-              className="scheme-card"
-              style={{ backgroundImage: `url(${scheme.image})` }}
+            key={scheme.id}
+            className="scheme-card"
+            style={{ backgroundImage: `url(${scheme.image})` }}
             >
               <div className="card-overlay">
                 <h2>{scheme.title}</h2>
@@ -117,6 +119,7 @@ const GovernmentSchemes = () => {
       </button>
     </section>
     </section>
+   
   );
 };
 

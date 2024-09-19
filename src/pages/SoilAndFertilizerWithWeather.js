@@ -44,6 +44,7 @@ const Weather = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchWeather();
+    document.getElementById('weather-containerr').style.width = '700px';
   };
 
   // Graph data for analytics (dummy data for demo)
@@ -61,57 +62,59 @@ const Weather = () => {
   };
 
   return (
-    <div className="weather-container">
-      <h2 className="header">Smart Farmer's Weather & Soil Guide</h2>
+    <div className='weather-wrapper'>
 
-      <form onSubmit={handleSubmit} className="location-form">
-        <div className="input-group">
-          <input
-            type="text"
-            placeholder="Enter City Name"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-          <button type="submit" className="btn">Get Weather</button>
-        </div>
-      </form>
+      <div id='weather-containerr' className="weather-container">
+        <h2 className="header">Smart Farmer's Weather & Soil Guide</h2>
 
-      {weatherData && (
-        <div className="weather-info">
-          <div className="weather-display">
-            <h3>{weatherData.name}, {weatherData.sys.country}</h3>
-            <div className="temp">
-              {Math.round(weatherData.main.temp)}°C
+        <form onSubmit={handleSubmit} className="location-form">
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="Enter City Name"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <button type="submit" className="btn">Get Weather</button>
+          </div>
+        </form>
+
+        {weatherData && (
+          <div className="weather-info">
+            <div className="weather-display">
+              <h3>{weatherData.name}, {weatherData.sys.country}</h3>
+              <div className="temp">
+                {Math.round(weatherData.main.temp)}°C
+              </div>
+              <div className="weather-icon">
+                <img
+                  src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                  alt="weather icon"
+                />
+              </div>
+              <p>{weatherData.weather[0].description}</p>
+              <p>Wind: {weatherData.wind.speed} km/h</p>
+              <p>Humidity: {weatherData.main.humidity}%</p>
             </div>
-            <div className="weather-icon">
-              <img
-                src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-                alt="weather icon"
-              />
+
+            <div className="soil-fertilizer">
+              <h4>Soil Type: {soilType}</h4>
+              <h4>Recommended Fertilizers:</h4>
+              <ul>
+                {fertilizers.map((fertilizer, index) => (
+                  <li key={index}>{fertilizer}</li>
+                ))}
+              </ul>
             </div>
-            <p>{weatherData.weather[0].description}</p>
-            <p>Wind: {weatherData.wind.speed} km/h</p>
-            <p>Humidity: {weatherData.main.humidity}%</p>
-          </div>
 
-          <div className="soil-fertilizer">
-            <h4>Soil Type: {soilType}</h4>
-            <h4>Recommended Fertilizers:</h4>
-            <ul>
-              {fertilizers.map((fertilizer, index) => (
-                <li key={index}>{fertilizer}</li>
-              ))}
-            </ul>
+            <div style={{width:'100%'}} className="chart-container">
+              <Line data={chartData} />
+            </div>
           </div>
-
-          <div className="chart-container">
-            <Line data={chartData} />
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
 
 export default Weather;
-    

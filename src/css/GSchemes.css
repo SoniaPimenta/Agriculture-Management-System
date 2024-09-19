@@ -48,8 +48,12 @@
 /* GSchemes.css */
 
 /* Set background image for the entire page */
-body {
-    background-image: url('../assets/corn.jpg'); 
+
+.schemes-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-image: url('../assets/majdoor.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,6 +62,7 @@ body {
     color: #1a202c;
     margin: 0;
     padding: 0;
+    height: 100vh;
   }
   
   /* Schemes container */

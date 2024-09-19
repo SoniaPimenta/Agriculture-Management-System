@@ -1,3 +1,53 @@
+.dashy{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  background: url('../assets/tracktor.jpeg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+     background-size: cover
+}
+
+.dashy h3{
+  border-radius: 8px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+  border: #333;
+  background-color: #dadee2;
+  border-width: 1px solid #ccc;
+  cursor: pointer;
+}
+.dashy-corners{
+  padding-top: 100px;
+  display: flex;
+  /* align-items: center;
+  text-align: center; */
+  /* background-color: green; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap: 25%;
+}
+.dashy-box{
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  /* background-color: red; */
+  /* align-items: center; */
+}
+.dashy-center{
+  padding: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: red; */
+}
+
+
+
 .dashboard-container {
   background-color: #f8f9fa;
   padding: 20px;
@@ -48,6 +98,25 @@ h3 {
 @media (max-width: 768px) {
   .dashboard-container {
     padding: 10px;
+  }
+.dashy{
+  background: url('../assets/bg-noblur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .dashy-corners{
+    /* display: flex; */
+    padding-top: 30%;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .dashy-box{
+    gap: 30px;
+    /* display: flex;
+    flex-direction: row; */
+  }
+  .dashy-center{
+    padding: 30px;
   }
 
   .card-title {

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { FaSyncAlt, FaFilter } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import '../css/Dashboard.css'; // Custom styles
 
 const initialData = [
@@ -15,6 +16,22 @@ const initialData = [
 ];
 
 const Dashboard = () => {
+  const navigate = useNavigate(); 
+    const gotoweather=()=>{
+        navigate('/weather');
+    }
+    const gotomarket=()=>{
+      navigate('/Marketplace');
+  }
+  const gotoCroptracker=()=>{
+    navigate('/CropTracker');
+}
+const gotoGovernmentSchemes=()=>{
+  navigate('/GovernmentSchemes');
+}
+const gotoMarketPrices=()=>{
+  navigate('/MarketPrices');
+}
   const [data, setData] = useState(initialData);
 
   const refreshData = () => {
@@ -27,38 +44,25 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container container mt-4">
-      <div className="d-flex justify-content-between align-items-center">
-        <h3 className="text-center">Weekly Sales Overview</h3>
-        <button className="btn btn-outline-primary" onClick={refreshData}>
-          <FaSyncAlt className="me-2" /> Refresh Data
-        </button>
+    <div className='dashy'>
+      <div className='dashy-corners'>
+      <div className='dashy-left'>
+      <div className='dashy-box'>
+    <h3 onClick={gotoweather}>Weather</h3>
+    <h3 onClick={gotomarket}>Market Place</h3>
+    </div>
+      </div>
+      <div className='dashy-right'>
+      <div className='dashy-box'>
+    <h3 onClick={gotoCroptracker}>Crop Tracker</h3>
+    <h3 onClick={gotoGovernmentSchemes}>Government Schemes</h3>
+    </div>
+      </div>
+      </div>
+      <div className='dashy-center'>
+    <h3 onClick={gotoMarketPrices}>Market Prices</h3>
       </div>
 
-      <div className="row justify-content-center mt-4">
-        <div className="col-md-10 col-lg-8">
-          <div className="card chart-container shadow-sm">
-            <div className="card-body">
-              <div className="d-flex justify-content-between align-items-center mb-3">
-                <h5 className="card-title">Sales Data</h5>
-                <button className="btn btn-outline-secondary">
-                  <FaFilter className="me-2" /> Filter
-                </button>
-              </div>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={data}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" stroke="#666" />
-                  <YAxis stroke="#666" />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="sales" fill="#8884d8" />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

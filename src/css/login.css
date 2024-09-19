@@ -1,13 +1,21 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+  } */
+
+  .pager{
+    height: 100vh;
+    background: url('../assets/brownfarm.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: green;
+    display: flex;
+    justify-content: center;
   }
   
-  .page-background {
+  .wrapper {
     min-height: 100vh;
-    background: url('path_to_your_background_image.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -16,7 +24,7 @@
   
   .wrapper {
     width: 420px;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     color: white;
@@ -58,7 +66,12 @@
   .input-box input::placeholder {
     color: rgba(255, 255, 255, 0.7);
   }
-  
+  input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
   .input-box i {
     position: absolute;
     right: 20px;

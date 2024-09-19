@@ -1,4 +1,9 @@
-
+.crop-tracker-container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
 .input-card {
   width: 200%;

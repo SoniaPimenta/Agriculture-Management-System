@@ -54,7 +54,7 @@
 // // export default Forecast;
 
 import React, { useState, useEffect } from "react";
-import "./WeatherForecast.css";
+import '../css/Weather.css';
 
 const WeatherForecast = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -137,68 +137,68 @@ export default WeatherForecast;
 
 
 
-import React, { useState } from 'react';
-import axios from 'axios';
-import '../css/Weather.css';
+// import React, { useState } from 'react';
+// import axios from 'axios';
+// import '../css/Weather.css';
 
-const Weather = () => {
-  const [city, setCity] = useState(''); // City name input by user
-  const [weatherData, setWeatherData] = useState(null); // Holds the weather data
-  const API_KEY = '56423e0c1b17e786dab6b02691f65caa'; // Provided API key
+// const Weather = () => {
+//   const [city, setCity] = useState(''); // City name input by user
+//   const [weatherData, setWeatherData] = useState(null); // Holds the weather data
+//   const API_KEY = '56423e0c1b17e786dab6b02691f65caa'; // Provided API key
 
-  const fetchWeather = async () => {
-    if (city) {
-      try {
-        // Fetching the current weather based on the city name
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
-        );
-        setWeatherData(response.data); // Store the weather data in state
-      } catch (error) {
-        console.error('Error fetching weather data:', error);
-      }
-    }
-  };
+//   const fetchWeather = async () => {
+//     if (city) {
+//       try {
+//         // Fetching the current weather based on the city name
+//         const response = await axios.get(
+//           `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+//         );
+//         setWeatherData(response.data); // Store the weather data in state
+//       } catch (error) {
+//         console.error('Error fetching weather data:', error);
+//       }
+//     }
+//   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents page reload on form submit
-    fetchWeather(); // Fetch weather data for the entered city
-  };
+//   const handleSubmit = (e) => {
+//     e.preventDefault(); // Prevents page reload on form submit
+//     fetchWeather(); // Fetch weather data for the entered city
+//   };
 
-  return (
-    <div className="weather-container">
-      <h2>Weather Forecast</h2>
+//   return (
+//     <div className="weather-container">
+//       <h2>Weather Forecast</h2>
 
-      <form onSubmit={handleSubmit} className="location-form">
-        <div>
-          <input
-            type="text"
-            placeholder="Enter City Name"
-            value={city}
-            onChange={(e) => setCity(e.target.value)} // Update the city state on input change
-          />
-        </div>
-        <button type="submit">Get Weather</button>
-      </form>
+//       <form onSubmit={handleSubmit} className="location-form">
+//         <div>
+//           <input
+//             type="text"
+//             placeholder="Enter City Name"
+//             value={city}
+//             onChange={(e) => setCity(e.target.value)} // Update the city state on input change
+//           />
+//         </div>
+//         <button type="submit">Get Weather</button>
+//       </form>
 
-      {/* If weather data exists, display it */}
-      {weatherData && (
-        <div className="weather-display">
-          <h3>{weatherData.name}, {weatherData.sys.country}</h3>
-          <div className="temp">{Math.round(weatherData.main.temp)}°C</div>
-          <div className="weather-icon">
-            <img
-              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-              alt="weather icon"
-            />
-          </div>
-          <p>{weatherData.weather[0].description}</p>
-          <p>Wind: {weatherData.wind.speed} km/h</p>
-          <p>Humidity: {weatherData.main.humidity}%</p>
-        </div>
-      )}
-    </div>
-  );
-};
+//       {/* If weather data exists, display it */}
+//       {weatherData && (
+//         <div className="weather-display">
+//           <h3>{weatherData.name}, {weatherData.sys.country}</h3>
+//           <div className="temp">{Math.round(weatherData.main.temp)}°C</div>
+//           <div className="weather-icon">
+//             <img
+//               src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+//               alt="weather icon"
+//             />
+//           </div>
+//           <p>{weatherData.weather[0].description}</p>
+//           <p>Wind: {weatherData.wind.speed} km/h</p>
+//           <p>Humidity: {weatherData.main.humidity}%</p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
-export default Weather;
+// export default Weather;
