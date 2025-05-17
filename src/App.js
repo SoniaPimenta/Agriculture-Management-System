@@ -1,30 +1,29 @@
-// import logo from './logo.svg';
+// App.js
+
 import './App.css';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import GovernmentSchemes from './pages/GSchemes';
 import MarketPrices from './pages/MarketPrices';
 import CropTracker from './pages/CropTracker';
 import Marketplace from './pages/Marketplace';
 import SoilAndFertilizerWithWeather from './pages/SoilAndFertilizerWithWeather';
-// import Dashboard from './Components/dashboard';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
-    
     <Router>
       <Routes>
-        {/* <Route path="/" element={<HomePage />} /> */}
-        <Route path="/Login" element={<Login />} />
-        {/* <Route path="/Weather" element={<Weather />} /> */}
-        <Route path="/Marketplace" element={<Marketplace />} />
-        <Route path="/CropTracker" element={<CropTracker />} />
-        <Route path="/GovernmentSchemes" element={<GovernmentSchemes />} />
-        <Route path="/MarketPrices" element={<MarketPrices />} />
-        <Route path="/Weather" element={<SoilAndFertilizerWithWeather />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/croptracker" element={<CropTracker />} />
+        <Route path="/governmentschemes" element={<GovernmentSchemes />} />
+        <Route path="/marketprices" element={<MarketPrices />} />
+        <Route path="/weather" element={<SoilAndFertilizerWithWeather />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        
-        {/* Redirect to dashboard if already logged in */}
+        {/* Removed OTP route */}
       </Routes>
     </Router>
   );
